@@ -200,24 +200,24 @@ export default function EventCard({ event }: EventProps) {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="bg-white shadow-md rounded-xl p-6 flex flex-col justify-between relative h-full"
+      className="bg-background/20 backdrop:blur-sm shadow-md rounded-xl p-6 flex flex-col justify-between relative h-full"
     >
       {/* 3D depth effect for content */}
       <div 
         style={{ transform: "translateZ(20px)" }}
-        className="flex flex-col justify-between h-full"
+        className="flex flex-col justify-between p-3 rounded-3xl bg-background/20 backdrop:blur-sm  h-full"
       >
-        <div>
-          <h2 className="text-xl font-semibold mb-2">{event.eventName}</h2>
-          <p className="text-gray-700 text-sm mb-2">{event.description}</p>
-          <p className="text-sm text-gray-500 mb-1">📍 {event.location}</p>
-          <p className="text-sm text-gray-500">💰 ₹{event.price}</p>
-          <p className="text-sm text-gray-500">🎟️ Tickets: {event.ticketsAvailable}</p>
+        <div >
+          <h2 className="text-2xl font-bold text-slate-300 mb-2">{event.eventName}</h2>
+          <p className="text-gray-300 text-sm mb-2">{event.description}</p>
+          <p className="text-sm text-gray-300 mb-1">📍 {event.location}</p>
+          <p className="text-sm text-gray-300">💰 ₹{event.price}</p>
+          <p className="text-sm text-gray-300">🎟️ Tickets: {event.ticketsAvailable}</p>
         </div>
         
         <button
           style={{ transform: "translateZ(30px)" }}
-          className="mt-4 bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition"
+          className="mt-4 bg-background/20 border-2 bg-blue-300 border-blue-300 backdrop:blur-sm text-white font-semibold py-2 rounded hover:bg-blue-700 transition"
           onClick={handleBuyClick}
         >
           Buy
