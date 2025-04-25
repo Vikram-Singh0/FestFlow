@@ -54,7 +54,7 @@ export const Header = () => {
                 key={item.id}
                 href={item.url}
                 onClick={handleClick}
-                className={`block text-slate-400 relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
+                className={`block text-slate-400 relative font-code  uppercase text-n-1 transition-colors hover:text-white ${
                   item.onlyMobile ? "lg:hidden" : ""
                 } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
                   item.url === pathname ? "z-2 lg:text-n-1" : "lg:text-n-1/50"
@@ -70,16 +70,16 @@ export const Header = () => {
 
         <Link
           href="/signup"
-          className="button hidden mr-8 text-slate-400 text-n-1/50 transition-colors hover:text-n-1 lg:block"
+          className="button hidden mr-8 text-slate-400 text-n-1/50 transition-colors hover:text-n-1 hover:text-white lg:block"
         >
           New account
         </Link>
-        <Button className="hidden text-slate-400 lg:flex" href="/api/auth/signin">
+        <Button className="hidden text-slate-400 lg:flex hover:text-white" href="/api/auth/signin">
           Sign in
         </Button>
 
         <Button
-          className="ml-auto lg:hidden"
+          className="ml-auto lg:hidden hover:text-white"
           px="px-3"
           onClick={toggleNavigation}
         >

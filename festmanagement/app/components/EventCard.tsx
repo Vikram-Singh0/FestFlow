@@ -86,16 +86,16 @@ export default function EventCard({ event }: EventProps) {
   };
 
   return (
-    <div className="bg-white shadow-md rounded-xl p-6 flex flex-col justify-between">
+    <div className=" shadow-md rounded-xl p-6 flex flex-col  bg-background/20 backdrop:blur-sm justify-between">
       <div>
-        <h2 className="text-xl font-semibold mb-2">{event.eventName}</h2>
-        <p className="text-gray-700 text-sm mb-2">{event.description}</p>
-        <p className="text-sm text-gray-500 mb-1">📍 {event.location}</p>
-        <p className="text-sm text-gray-500">💰 ₹{event.price}</p>
-        <p className="text-sm text-gray-500">🎟️ Tickets: {event.ticketsAvailable}</p>
+        <h2 className="text-2xl font-bold mb-2 text-slate-300">{event.eventName}</h2>
+        <p className="text-slate-400 text-sm mb-2">{event.description}</p>
+        <p className="text-sm text-gray-400 mb-1">📍 {event.location}</p>
+        <p className="text-sm text-gray-400">💰 ₹{event.price}</p>
+        <p className="text-sm text-gray-400">🎟️ Tickets: {event.ticketsAvailable}</p>
       </div>
       <button
-        className="mt-4 bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition"
+        className="mt-4 bg-background/20 border-2 bg-blue-300 border-blue-500 backdrop-blur-sm text-white font-semibold py-2 rounded hover:bg-blue-700 transition"
         onClick={handleBuyClick}
       >
         Buy
